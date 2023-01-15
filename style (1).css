@@ -1,0 +1,103 @@
+body {
+  font-size: 15pt;
+  display:flex;
+  justify-content:center;
+  font-size:16px;
+  font-family:montserrat;
+  width:100%;
+}
+.none{
+  padding:0;
+  margin:50px 0;
+  position:relative;
+}
+.container{
+  border:1px solid skyblue;
+  border-radius:10px;
+  padding:8px;
+}
+form .all{
+  border-radius:0px;
+  border-bottom:1px solid silver;
+  position:relative;
+  margin:30px 0;
+}
+.all input{
+  padding:0 5px;
+  height:40px;
+  border:none;
+  background:none;
+  outline:none;
+  font-size:16px;
+  color:darkgray;
+}
+.all label{
+  position:absolute;
+  top:50%;
+  left:5px;
+  transform:translateY(-50%);
+  color:silver;
+  pointer-events:none;
+  transition:.5s;
+}
+.all span::before{
+  border-radius:5px;
+  content:' ';
+  position:absolute;
+  top:40px;
+  left:0px;
+  width:0%;
+  height:1px;
+  background:skyblue;
+  box-shadow:0px 1px 1px skyblue;
+  transition:.5s;
+}
+.all input:focus ~ label,
+.all input:valid ~ label{
+  top:-5px;
+  color:skyblue;
+  text-shadow:0px 0px 1px skyblue;
+}
+.all input:focus ~ span::before,
+.all input:valid ~ span::before{
+  width:100%;
+}
+input[type="submit"]{
+  border:1px solid skyblue;
+  outline:none;
+  color:white;
+  margin:20px 0;
+  width:100%;
+  border-radius:20px;
+  font-size:16px;
+  background-color:skyblue;
+  padding:10px;
+  transition:.5s;
+}
+input[type="submit"]:hover{
+  color:darkgray;
+  background-color:white;
+}
+.fget{
+  color:silver;
+  font-size:9px;
+}
+.fget a{
+  outline:none;
+  color:skyblue;
+  text-decoration:none;
+}
+.fget a:hover{
+  text-decoration:underline;
+}
+.title{
+  position:absolute;
+  top:-3%;
+  left:10px;
+  background-color:white;
+  border-radius:20px;
+  padding:0 8px;
+  color:skyblue;
+  font-size:16px;
+  font-weight:bold;
+}
